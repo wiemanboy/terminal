@@ -11,7 +11,7 @@ echo ""
 add_to_bashrc() {
     local marker="$1"
     local content="$2"
-    local bashrc="~/.bashrc"
+    local bashrc="$HOME/.bashrc"
     
     # Check if the marker already exists in .bashrc
     if ! grep -q "$marker" "$bashrc" 2>/dev/null; then
@@ -40,7 +40,7 @@ fi
 
 GENERAL_SHORTCUTS='# general shortcuts
 netshoot="nicolaka/netshoot"
-kubeconfig="/home/jarno/.kube/config"'
+kubeconfig="$HOME/.kube/config"'
 
 add_to_bashrc "# general shortcuts" "$GENERAL_SHORTCUTS"
 
